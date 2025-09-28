@@ -1,20 +1,13 @@
-import os
 from telegram import Bot
-from telegram.ext import Updater, CommandHandler
 
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TOKEN = AAH__ie40UxlVUOMw-dXP1D5tewFGBAp2tY
+CHANNEL_ID = https://t.me/tatyshcho
 
 bot = Bot(token=TOKEN)
 
-def start(update, context):
-    update.message.reply_text("Бот запущено!")
-
-def main():
-    from telegram.ext import Updater
-    updater = Updater(TOKEN)
-    updater.dispatcher.add_handler(CommandHandler("start", start))
-    updater.start_polling()
-    updater.idle()
+def post_news():
+    news_text = "Привет! Это автоматическая новость от бота."
+    bot.send_message(chat_id=CHANNEL_ID, text=news_text)
 
 if __name__ == "__main__":
-    main()
+    post_news()
