@@ -1,7 +1,7 @@
 from telegram import Bot
 
 TOKEN = AAH__ie40UxlVUOMw-dXP1D5tewFGBAp2tY
-CHANNEL_ID = @tatyshcho
+CHANNEL_ID = "@tatyshcho"
 
 bot = Bot(token=TOKEN)
 
@@ -11,4 +11,5 @@ def post_news():
 
 if __name__ == "__main__":
     post_news()
+
 
